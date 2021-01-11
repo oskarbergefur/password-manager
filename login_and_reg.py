@@ -1,5 +1,6 @@
 # Functions for the program's login and registration system
 
+
 def login():
 	print("\nSign in to Your Account")
 
@@ -10,7 +11,7 @@ def login():
 		user_file = open(un + ".txt", "r")
 	except FileNotFoundError:
 		print("User Does Not Exist")
-		login()
+		return login()
 
 	username, password = user_file.readlines()
 
@@ -23,10 +24,10 @@ def login():
 
 	if pw != password:
 		print("Too Many Tries")
-		return False
+		return None
 
 	print("Successful Login!")
-	return True
+	return un
 
 
 def register():
@@ -52,5 +53,5 @@ def register():
 		return
 
 	print("Username Already Taken")
-	register()
+	return register()
 
