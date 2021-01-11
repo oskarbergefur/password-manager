@@ -1,7 +1,5 @@
 # Functions for the program's login and registration system
 
-import pandas
-
 def login():
 	print("\nSign in to Your Account")
 
